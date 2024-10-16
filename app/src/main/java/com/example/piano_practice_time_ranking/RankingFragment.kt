@@ -29,13 +29,13 @@ class RankingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // ListViewの参照を取得
-        val listView: ListView = binding.myListView
+        val listView: ListView = binding.todayPracticeTimeRankingListView
 
         // 表示するデータを用意
         val data = listOf("Item 1", "Item 2", "Item 3", "Item 4")
 
         // ArrayAdapterを作成
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, data)
+        val adapter = ArrayAdapter(requireContext(), R.layout.today_practice_time_ranking_list_item, data)
 
         // ListViewにアダプターをセット
         listView.adapter = adapter

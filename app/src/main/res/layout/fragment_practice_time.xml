@@ -1,15 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PracticeTimeFragment"
-    >
+    tools:context=".PracticeTimeFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="練習時間"
+    <Button
+        android:id="@+id/today_button"
+        android:hint="今日"
+        android:textColorHint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
         />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/today_practice_time_text_view"
+        android:text="今日のピアノの練習時間"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/today_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="80dp"
+        />
+
+    <TextView
+        android:id="@+id/number_hour_text_view"
+        android:text="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/today_practice_time_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        />
+
+    <TextView
+        android:id="@+id/hour_text_view"
+        android:text="時間"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/today_practice_time_text_view"
+        app:layout_constraintStart_toEndOf="@+id/vertical_guideline"
+        android:layout_marginTop="32dp"
+        />
+
+    <TextView
+        android:id="@+id/number_minute_text_view"
+        android:text="30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/number_hour_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        />
+
+    <TextView
+        android:id="@+id/minute_text_view"
+        android:text="分"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/hour_text_view"
+        app:layout_constraintStart_toEndOf="@+id/vertical_guideline"
+        android:layout_marginTop="32dp"
+        />
+
+    <Button
+        android:id="@+id/record_button"
+        android:text="記録する"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

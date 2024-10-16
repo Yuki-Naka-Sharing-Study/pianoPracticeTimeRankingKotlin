@@ -40,4 +40,9 @@ class RankingFragment : Fragment() {
         // ListViewにアダプターをセット
         listView.adapter = adapter
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null // メモリリークを防ぐためにbindingをクリア
+    }
 }

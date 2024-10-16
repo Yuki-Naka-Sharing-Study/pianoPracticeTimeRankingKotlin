@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/fragment_record"
+        android:id="@+id/recordFragment"
         android:title="記録"
         />
     <item
-        android:id="@+id/fragment_practice_time"
+        android:id="@+id/practiceTimeFragment"
         android:title="練習時間"
         />
     <item
-        android:id="@+id/fragment_ranking"
+        android:id="@+id/rankingFragment"
         android:title="ランキング"
         />
 </menu>
